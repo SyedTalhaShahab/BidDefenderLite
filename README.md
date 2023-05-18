@@ -1,3 +1,3 @@
 # BidDefenderLite
 
-Generate your own key. My key is just an example.
+A key is included for the double authentication, but do not forget to generate your own.
