@@ -119,7 +119,7 @@ password_lbl = tkinter.Label(
 # add view login btns
 add_btn = tkinter.Button(jFrame, text="Add", bg="#FF3380", font=(
     "Arial", 16), fg="white", command=add_btnn, padx=10)
-login_btn = tkinter.Button(jFrame, text="Login", bg="#FF3380", font=(
+login_btn = tkinter.Button(jFrame, text="Bit Defender", bg="#FF3380", font=(
     "Arial", 16), fg="white", command=login_btnn)
 
 # adding properties
