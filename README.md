@@ -1,3 +1,3 @@
 # BidDefenderLite
 
-A key is included for the double authentication, but do not forget to generate your own.
+Your vs code EXPLORER tab needs to show this exact directory layout for this program to work
