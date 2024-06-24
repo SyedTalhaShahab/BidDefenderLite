@@ -6,7 +6,7 @@ from collections import Counter
 import tkinter
 
 
-# all 10 characters of username and password need to be unique
+# this is so that all 10 characters of username and password need to be unique
 def is_Unique_Entry():
     if (len(Counter(usrname.get())) >= 10) and (len(password.get()) >= 10):
         if (usrname.get().find("|") == -1) and (password.get().find("|") == -1):
@@ -21,7 +21,7 @@ def is_Unique_Entry():
         return False
 
 
-# load the key
+# this is so that it loads the key
 def load_key():
     file = open("key.key", "rb")
     key = file.read()
@@ -29,7 +29,7 @@ def load_key():
     return key
 
 
-# write the key
+# this is so that itwrite the key
 def write_key():
     # if key.key file doesnt exist in directory, write_key(): is called
     #  and compiled once, THEN THE CALL to "write_key():" IS REMOVED
@@ -57,19 +57,19 @@ def add_btnn():
 
 
 def create_new_window():
-    jFrame.destroy()
-    jFrame2 = Tk(className="\Encryption Key")
-    jFrame2.resizable(0, 0)
-    jFrame2.configure(bg="#333334")
+    frame.destroy()
+    frame2 = Tk(className="\Encryption Key")
+    frame2.resizable(0, 0)
+    frame2.configure(bg="#333334")
     # creating properties
     login_title2 = tkinter.Label(
-        jFrame2, text="Here is your Two Factor Authentication Key:", fg="#FF3380", bg="#333334", font=("Arial", 28))
+        frame2, text="Here is your Two Factor Authentication Key:", fg="#FF3380", bg="#333334", font=("Arial", 28))
     # adding properties
-    key_lbl = tkinter.Label(jFrame2, text=passw,
+    key_lbl = tkinter.Label(frame2, text=passw,
                             bg="#333334", fg="white", font=("Arial", 16), wraplength=700)
     login_title2.place(relx=0.5, rely=0.3, anchor="center")
     key_lbl.place(relx=0.5, rely=0.6, anchor="center")
-    jFrame2.geometry(f"800x200+{(ws-800)//2}+{(hs-200)//2}")
+    frame2.geometry(f"800x200+{(ws-800)//2}+{(hs-200)//2}")
 
 
 def login_btnn():
@@ -100,26 +100,26 @@ def does_File_Exist(filePathAndName):
 
 pygame.init()
 
-jFrame = Tk(className="\Login")
+frame = Tk(className="\Login")
 
-# acts like Java jFrame
-jFrame.resizable(0, 0)
-jFrame.configure(bg="#333334")
+# acts like Java frame
+frame.resizable(0, 0)
+frame.configure(bg="#333334")
 
 # creating properties
 login_title = tkinter.Label(
-    jFrame, text=" Bit Defender Lite", fg="#FF3380", bg="#333334", font=("Arial", 30))
-usrname_lbl = tkinter.Label(jFrame, text="Username:",
+    frame, text=" Bit Defender Lite", fg="#FF3380", bg="#333334", font=("Arial", 30))
+usrname_lbl = tkinter.Label(frame, text="Username:",
                             bg="#333334", fg="white", font=("Arial", 16))
-usrname = tkinter.Entry(jFrame, bg="white", font=("Arial", 16))
-password = tkinter.Entry(jFrame, show="●", bg="white", font=("Arial", 16))
+usrname = tkinter.Entry(frame, bg="white", font=("Arial", 16))
+password = tkinter.Entry(frame, show="●", bg="white", font=("Arial", 16))
 password_lbl = tkinter.Label(
-    jFrame, text="Password:", bg="#333334", fg="white", font=("Arial", 16))
+    frame, text="Password:", bg="#333334", fg="white", font=("Arial", 16))
 
 # add view login btns
-add_btn = tkinter.Button(jFrame, text="Add", bg="#FF3380", font=(
+add_btn = tkinter.Button(frame, text="Add", bg="#FF3380", font=(
     "Arial", 16), fg="white", command=add_btnn, padx=10)
-login_btn = tkinter.Button(jFrame, text="Bit Defender", bg="#FF3380", font=(
+login_btn = tkinter.Button(frame, text="Bit Defender", bg="#FF3380", font=(
     "Arial", 16), fg="white", command=login_btnn)
 
 # adding properties
@@ -135,10 +135,10 @@ login_btn.place(relx=0.6, rely=0.8, anchor="center")
 
 # get the size of window
 # width of the screen
-ws = jFrame.winfo_screenwidth()
+ws = frame.winfo_screenwidth()
 # height of the screen
-hs = jFrame.winfo_screenheight()
+hs = frame.winfo_screenheight()
 
 # w, h, x, y
-jFrame.geometry(f"400x330+{(ws-400)//2}+{(hs-330)//2}")
-jFrame.mainloop()
+frame.geometry(f"400x330+{(ws-400)//2}+{(hs-330)//2}")
+frame.mainloop()
